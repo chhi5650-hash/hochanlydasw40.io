@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SETEC Institute</title>
+    <meta name="description" content="Get in touch with SETEC Institute. Find our address, phone number, email, and a map to our campus. Use our contact form for any inquiries.">
+    <link rel="stylesheet" href="./style.css">
+    <!-- Google Fonts for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header: Same as other pages for consistency -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="./images/logo.png" alt="SETEC Institute Logo">
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle">Menu</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header: Introduces the contact page -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Get in Touch</h1>
+                <p>We're here to help. Contact us with any questions or to schedule a campus visit.</p>
+            </div>
+        </section>
+
+        <!-- Main Contact Section: Form and Details -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="grid grid-2 contact-layout">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <h2>Send Us a Message</h2>
+                        <form id="contactForm" action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="Enter your fullname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your address" required>
+                            </div>
+                             <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Enter your subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Enter your message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="contact-details-container">
+                        <h2>Contact Information</h2>
+                        <p>Feel free to reach out to us through any of the following methods. Our office is open during regular business hours.</p>
+                        <ul class="contact-info-list">
+                            <li>
+                                <strong>Address:</strong>
+                                <p>No. 86A, Street 110, Russian Federation Blvd,<br>Phnom Penh, Cambodia</p>
+                            </li>
+                            <li>
+                                <strong>Phone:</strong>
+                                <p>(+855) 23 888 898 / (+855) 11 888 878</p>
+                            </li>
+                             <li>
+                                <strong>Email:</strong>
+                                <p>info@setecu.com</p>
+                            </li>
+                             <li>
+                                <strong>Office Hours:</strong>
+                                <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 8:00 AM - 12:00 PM</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.784822295697!2d104.8961793152643!3d11.56780699178713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951a082776c11%3A0x7d1c6863d126487!2sSETEC%20Institute!5e0!3m2!1sen!2skh!4v1671234567890!5m2!1sen!2skh" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+
+    </main>
+
+    <!-- Footer: Same footer for consistency -->
+    <footer>
+        <div class="container grid grid-4">
+            <div>
+                <h4>About SETEC</h4>
+                <p>A leading private institute in Cambodia focusing on technology, design, and business education.</p>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <p>No. 86A, Street 110, Russian Federation Blvd, Phnom Penh, Cambodia<br>
+                Email: info@setecu.com<br>
+                Phone: (+855) 23 888 898</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="#">Student Life</a></li>
+                    <li><a href="#">Alumni</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 SETEC Institute. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

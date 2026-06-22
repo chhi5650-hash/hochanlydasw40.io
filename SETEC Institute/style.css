@@ -1,0 +1,450 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #0056b3; /* A professional blue */
+    --secondary-color: #007bff;
+    --accent-color: #ffc107; /* A vibrant yellow for accents */
+    --text-color: #333;
+    --light-gray: #f4f4f4;
+    --white: #ffffff;
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+p { margin-bottom: 1rem; }
+a { color: var(--secondary-color); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.text-center { text-align: center; }
+.bg-light { background-color: var(--light-gray); }
+
+/* --- Utility & Layout Classes --- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--secondary-color);
+    color: var(--white);
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary { background: var(--accent-color); color: var(--text-color); }
+.btn:hover { opacity: 0.9; text-decoration: none; }
+
+.grid { display: grid; gap: 20px; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); align-items: center; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+.section-padding { padding: 4rem 0; }
+
+/* --- Header & Navigation --- */
+header {
+    background: var(--white);
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img { height: 50px; }
+.main-nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+.main-nav ul li a {
+    padding: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+.main-nav ul li a.active, .main-nav ul li a:hover {
+    color: var(--primary-color);
+}
+.mobile-nav-toggle { display: none; } /* Hidden on desktop */
+
+/* --- Page Sections --- */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://www.setecu.com/images/slides/slide-2.jpg') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 6rem 0;
+}
+.hero h1 { font-size: 3rem; }
+
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+.card h3 { color: var(--primary-color); }
+
+.news-item {
+    border-bottom: 1px solid #eee;
+    padding: 1.5rem 0;
+}
+.news-item:last-child { border-bottom: none; }
+.news-item span { color: #777; font-size: 0.9rem; }
+
+.page-header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 0;
+    text-align: center;
+}
+.program-detail { margin-bottom: 2rem; }
+
+/* --- Footer --- */
+footer {
+    background: #222;
+    color: var(--white);
+    padding-top: 3rem;
+}
+footer h4 { color: var(--accent-color); }
+footer ul { list-style: none; padding: 0; }
+footer ul li a { color: var(--white); }
+.footer-bottom {
+    background: #111;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer-bottom p { margin: 0; }
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    
+    .main-nav {
+        display: none; /* Hide nav on mobile */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        flex-direction: column;
+    }
+    .main-nav.active { display: flex; } /* Show nav when active */
+    .main-nav ul { flex-direction: column; width: 100%; }
+    .main-nav ul li { text-align: center; border-bottom: 1px solid #ddd; }
+    
+    .mobile-nav-toggle {
+        display: block;
+        background: var(--primary-color);
+        color: var(--white);
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+/* --- Styles for About Page --- */
+
+/* Director's Message Section */
+.director-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Vision & Mission Section */
+.vision-mission-section {
+    background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), url('https://www.setecu.com/images/background/1.jpg') no-repeat center center/cover;
+    color: var(--white);
+    border-radius: 8px;
+}
+.vision-mission-section h2, .vision-mission-section h3 {
+    color: var(--white);
+}
+.vision-mission-section h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+/* Timeline for History Section */
+.timeline {
+    position: relative;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    border: 4px solid var(--accent-color);
+    border-radius: 50%;
+    top: 25px;
+    z-index: 1;
+}
+.timeline-item:nth-child(odd)::after {
+    right: -10px;
+}
+.timeline-item:nth-child(even)::after {
+    left: -10px;
+}
+.timeline-year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.timeline-content {
+    padding: 15px;
+    background-color: var(--light-gray);
+    border-radius: 6px;
+    position: relative;
+}
+
+/* Responsive adjustments for timeline */
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        text-align: left !important;
+    }
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    .timeline-item::after {
+        left: 21px;
+    }
+}
+/* --- Styles for Admissions Page --- */
+
+/* How to Apply Section */
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+.step {
+    position: relative;
+}
+.step-number {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.step h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Entry Requirements Section */
+.requirements-box {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-color);
+}
+.requirements-box ul {
+    list-style: none;
+    padding: 0;
+}
+.requirements-box li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+.requirements-box li::before {
+    content: '✔';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* FAQ Section */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 1rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    transition: transform 0.3s ease;
+}
+.faq-question.active::after {
+    transform: rotate(45deg);
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.faq-answer p {
+    padding: 0 1rem 1rem 1rem;
+    margin: 0;
+}
+/* --- Styles for Contact Page --- */
+
+.contact-layout {
+    align-items: flex-start; /* Aligns items to the top */
+}
+
+/* Contact Form Styles */
+.contact-form-container {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+}
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--body-font);
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+#contactForm button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Contact Details Styles */
+.contact-details-container {
+    padding: 0 2rem;
+}
+.contact-info-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+.contact-info-list li {
+    margin-bottom: 1.5rem;
+    padding-left: 2.5rem;
+    position: relative;
+}
+.contact-info-list li strong {
+    display: block;
+    margin-bottom: 0.2rem;
+}
+.contact-info-list li p {
+    margin: 0;
+    color: #555;
+}
+/* Icons for contact details */
+.contact-info-list li::before {
+    font-family: "Font Awesome 5 Free"; /* You would need to link Font Awesome for this */
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+/* Fallback if not using an icon font */
+.contact-info-list li:nth-of-type(1)::before { content: '📍'; }
+.contact-info-list li:nth-of-type(2)::before { content: '📞'; }
+.contact-info-list li:nth-of-type(3)::before { content: '📧'; }
+.contact-info-list li:nth-of-type(4)::before { content: '🕒'; }
+
+/* Map Section */
+.map-section {
+    width: 100%;
+    /* The iframe takes care of the height */
+}
+
+/* Responsive adjustments for contact page */
+@media (max-width: 900px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+    .contact-details-container {
+        padding: 2rem 0 0 0; /* Add padding on top for mobile */
+    }
+}
